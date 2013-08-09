@@ -4,8 +4,8 @@
 
 
 /* suggest use redis to store fd info*/
-int fd_map[1024 * 1024] = {0};
-int ready_fd_map[1024 * 1024] = {0};
+int fd_map[MAX_FD] = {0};
+int ready_fd_map[MAX_FD] = {0};
 
 
 void io_loop(int listen_sock, int epoll_fd) {

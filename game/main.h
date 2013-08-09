@@ -20,7 +20,7 @@
 #define MAXLINE 512
 #define MAX_EVENTS 256
 #define RESP_HEADER_LENTH 152
-
+#define MAX_FD = 1024 * 1024
 
 #define DEBUG
 
