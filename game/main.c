@@ -88,7 +88,7 @@ void process_request(int client, int epoll_fd) {
            1. client read to porxy
            2. proxy read to client
         */
-        char buf[4096];
+        char buf[1048576]; //buf 1M
         count = read_all(client, buf);
         int fd = fd_map[client];
 
@@ -111,7 +111,7 @@ int main(int argc, char** argv) {
     int listen_sock = open_non_blocking_socket(2020);
 
     //2.fork load balance server
-    //fork_processes(2);
+    fork_processes(2);
 
     //3. create epoll and register event
     int epoll_fd = epoll_start(listen_sock);

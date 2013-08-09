@@ -6,5 +6,3 @@ proxy: clean main.c main.h network.c process.c
 
 clean:
 	rm game a.out -f
-
-
